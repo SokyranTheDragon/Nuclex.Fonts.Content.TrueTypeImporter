@@ -52,7 +52,8 @@ artifacts/
 *.meta
 *.obj
 *.pch
-*.pdb
+# used by freetype
+#*.pdb
 *.pgc
 *.pgd
 *.rsp

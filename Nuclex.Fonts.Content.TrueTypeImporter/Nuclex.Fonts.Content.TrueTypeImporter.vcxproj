@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{8C1E3601-343F-4F00-8A17-07D46F71DEC5}</ProjectGuid>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>NuclexFontsContentTrueTypeImporter</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
@@ -90,10 +90,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>../References/freetype/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>legacy_stdio_definitions.lib;freetype.$(Configuration).lib;glu32.lib;gdi32.lib;shell32.lib;comsuppwd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../References/freetype/msvc-10.0-x86</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -101,30 +103,36 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>../References/freetype/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>legacy_stdio_definitions.lib;freetype.$(Configuration).lib;glu32.lib;gdi32.lib;shell32.lib;comsuppwd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../References/freetype/msvc-10.0-x64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>../References/freetype/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>legacy_stdio_definitions.lib;freetype.$(Configuration).lib;glu32.lib;gdi32.lib;shell32.lib;comsuppwd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../References/freetype/msvc-10.0-x86</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>../References/freetype/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>legacy_stdio_definitions.lib;freetype.$(Configuration).lib;glu32.lib;gdi32.lib;shell32.lib;comsuppwd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../References/freetype/msvc-10.0-x64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -133,28 +141,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Nuclex.Fonts.Content.TrueTypeImporter.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Stdafx.h" />
+    <ClCompile Include="Properties\AssemblyInfo.cpp" />
+    <ClCompile Include="Source\FontHinter.cpp" />
+    <ClCompile Include="Source\FontOrigin.cpp" />
+    <ClCompile Include="Source\FreeTypeFontProcessor.cpp" />
+    <ClCompile Include="Source\FreeTypeManager.cpp" />
+    <ClCompile Include="Source\ReverseStringLengthComparer.cpp" />
+    <ClCompile Include="Source\SpriteFonts\CygonRectanglePacker.cpp" />
+    <ClCompile Include="Source\SpriteFonts\FreeTypeFontRasterizer.cpp" />
+    <ClCompile Include="Source\SpriteFonts\NuclexSpriteFontDescriptionProcessor.cpp" />
+    <ClCompile Include="Source\SpriteFonts\OutOfSpaceException.cpp" />
+    <ClCompile Include="Source\SpriteFonts\RectanglePacker.cpp" />
+    <ClCompile Include="Source\SpriteFonts\SpriteFontContent.cpp" />
+    <ClCompile Include="Source\SpriteFonts\SpriteFontWriter.cpp" />
+    <ClCompile Include="Source\VectorFonts\FreeTypeFontTessellator.cpp" />
+    <ClCompile Include="Source\VectorFonts\FreeTypeFontVectorizer.cpp" />
+    <ClCompile Include="Source\VectorFonts\NuclexVectorFontDescriptionProcessor.cpp" />
+    <ClCompile Include="Source\VectorFonts\VectorFontCharacterContent.cpp" />
+    <ClCompile Include="Source\VectorFonts\VectorFontCharacterWriter.cpp" />
+    <ClCompile Include="Source\VectorFonts\VectorFontContent.cpp" />
+    <ClCompile Include="Source\VectorFonts\VectorFontWriter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="Nuclex.Fonts.Content.TrueTypeImporter.cpp" />
-    <ClCompile Include="Stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClInclude Include="Resources\resource.h" />
+    <ClInclude Include="Source\clix.h" />
+    <ClInclude Include="Source\FontHinter.h" />
+    <ClInclude Include="Source\FontOrigin.h" />
+    <ClInclude Include="Source\FreeTypeFontProcessor.h" />
+    <ClInclude Include="Source\FreeTypeManager.h" />
+    <ClInclude Include="Source\ReverseStringLengthComparer.h" />
+    <ClInclude Include="Source\SpriteFonts\CygonRectanglePacker.h" />
+    <ClInclude Include="Source\SpriteFonts\FreeTypeFontRasterizer.h" />
+    <ClInclude Include="Source\SpriteFonts\NuclexSpriteFontDescriptionProcessor.h" />
+    <ClInclude Include="Source\SpriteFonts\OutOfSpaceException.h" />
+    <ClInclude Include="Source\SpriteFonts\RectanglePacker.h" />
+    <ClInclude Include="Source\SpriteFonts\SpriteFontContent.h" />
+    <ClInclude Include="Source\SpriteFonts\SpriteFontWriter.h" />
+    <ClInclude Include="Source\VectorFonts\FreeTypeFontTessellator.h" />
+    <ClInclude Include="Source\VectorFonts\FreeTypeFontVectorizer.h" />
+    <ClInclude Include="Source\VectorFonts\NuclexVectorFontDescriptionProcessor.h" />
+    <ClInclude Include="Source\VectorFonts\VectorFontCharacterContent.h" />
+    <ClInclude Include="Source\VectorFonts\VectorFontCharacterWriter.h" />
+    <ClInclude Include="Source\VectorFonts\VectorFontContent.h" />
+    <ClInclude Include="Source\VectorFonts\VectorFontWriter.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <ResourceCompile Include="Resources\app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="app.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="app.ico" />
+    <Image Include="Resources\app.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

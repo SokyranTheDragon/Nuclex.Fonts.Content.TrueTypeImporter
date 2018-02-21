@@ -13,39 +13,153 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\VectorFonts">
+      <UniqueIdentifier>{ee6d1bd2-c196-4531-baf8-222d56b67919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SpriteFonts">
+      <UniqueIdentifier>{96c3579f-0219-4ac5-a64f-29dc9fad00c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SpriteFonts">
+      <UniqueIdentifier>{3608e217-2c8a-459e-84d7-1e303171f246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VectorFonts">
+      <UniqueIdentifier>{1180e9da-1694-4ccf-baa1-e6c1a05b9809}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Nuclex.Fonts.Content.TrueTypeImporter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Nuclex.Fonts.Content.TrueTypeImporter.cpp">
+    <ClCompile Include="Properties\AssemblyInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AssemblyInfo.cpp">
+    <ClCompile Include="Source\FontHinter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Stdafx.cpp">
+    <ClCompile Include="Source\FontOrigin.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FreeTypeFontProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FreeTypeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ReverseStringLengthComparer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VectorFonts\FreeTypeFontTessellator.cpp">
+      <Filter>Source Files\VectorFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VectorFonts\FreeTypeFontVectorizer.cpp">
+      <Filter>Source Files\VectorFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VectorFonts\NuclexVectorFontDescriptionProcessor.cpp">
+      <Filter>Source Files\VectorFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VectorFonts\VectorFontCharacterContent.cpp">
+      <Filter>Source Files\VectorFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VectorFonts\VectorFontCharacterWriter.cpp">
+      <Filter>Source Files\VectorFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VectorFonts\VectorFontContent.cpp">
+      <Filter>Source Files\VectorFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\VectorFonts\VectorFontWriter.cpp">
+      <Filter>Source Files\VectorFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteFonts\SpriteFontWriter.cpp">
+      <Filter>Source Files\SpriteFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteFonts\CygonRectanglePacker.cpp">
+      <Filter>Source Files\SpriteFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteFonts\FreeTypeFontRasterizer.cpp">
+      <Filter>Source Files\SpriteFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteFonts\NuclexSpriteFontDescriptionProcessor.cpp">
+      <Filter>Source Files\SpriteFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteFonts\OutOfSpaceException.cpp">
+      <Filter>Source Files\SpriteFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteFonts\RectanglePacker.cpp">
+      <Filter>Source Files\SpriteFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteFonts\SpriteFontContent.cpp">
+      <Filter>Source Files\SpriteFonts</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <ClInclude Include="Resources\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\clix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FontHinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FontOrigin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FreeTypeFontProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FreeTypeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ReverseStringLengthComparer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\VectorFonts\VectorFontWriter.h">
+      <Filter>Header Files\VectorFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\VectorFonts\FreeTypeFontTessellator.h">
+      <Filter>Header Files\VectorFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\VectorFonts\FreeTypeFontVectorizer.h">
+      <Filter>Header Files\VectorFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\VectorFonts\NuclexVectorFontDescriptionProcessor.h">
+      <Filter>Header Files\VectorFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\VectorFonts\VectorFontCharacterContent.h">
+      <Filter>Header Files\VectorFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\VectorFonts\VectorFontCharacterWriter.h">
+      <Filter>Header Files\VectorFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\VectorFonts\VectorFontContent.h">
+      <Filter>Header Files\VectorFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteFonts\SpriteFontWriter.h">
+      <Filter>Header Files\SpriteFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteFonts\CygonRectanglePacker.h">
+      <Filter>Header Files\SpriteFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteFonts\FreeTypeFontRasterizer.h">
+      <Filter>Header Files\SpriteFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteFonts\NuclexSpriteFontDescriptionProcessor.h">
+      <Filter>Header Files\SpriteFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteFonts\OutOfSpaceException.h">
+      <Filter>Header Files\SpriteFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteFonts\RectanglePacker.h">
+      <Filter>Header Files\SpriteFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteFonts\SpriteFontContent.h">
+      <Filter>Header Files\SpriteFonts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="app.rc">
+    <ResourceCompile Include="Resources\app.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="app.ico">
+    <Image Include="Resources\app.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
